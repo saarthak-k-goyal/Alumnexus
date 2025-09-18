@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard - Alumnexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #F5F7FA;
+            color: #052A4A;
+        }
+
+        .bg-primary {
+            background-color: #052A4A;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 2rem 0 1rem;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #09A89E;
+            color: white;
+        }
+
+        tr.gold {
+            background-color: #FFD70022;
+        }
+
+        tr.silver {
+            background-color: #C0C0C022;
+        }
+
+        tr.bronze {
+            background-color: #CD7F3222;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #052A4A;
+            color: white;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
+        .text-teal {
+            color: #09A89E;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="users" class="w-8 h-8 text-teal"></i>
+                <a href="index.html" class="text-2xl font-bold">Alumnexus</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="dashboard-alumni.html" class="hover:text-teal font-medium">Dashboard</a>
+                <a href="mentorship.html" class="text-white hover:text-teal transition">Mentorship</a>
+                <a href="events.html" class="text-white hover:text-teal transition">Events</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary-dark px-6 py-2" id="mobile-menu">
+            <a href="dashboard-alumni.html" class="block py-2 text-teal font-medium">Dashboard</a>
+            <a href="mentorship.html" class="block py-2 text-white hover:text-teal transition">Mentorship</a>
+            <a href="events.html" class="block py-2 text-white hover:text-teal transition">Events</a>
+            <a href="profile.html" class="block py-2 text-white hover:text-teal transition">Profile</a>
+            <a href="settings.html" class="block py-2 text-white hover:text-teal transition">Settings</a>
+            <a href="index.html" class="block py-2 text-white hover:text-teal transition">Logout</a>
+        </div>
+    </nav>
+
+    <h2>Top Alumni Contributors</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Contribution Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="gold">
+                <td>1</td>
+                <td>Rahul Sharma</td>
+                <td>2015</td>
+                <td>150</td>
+            </tr>
+            <tr class="silver">
+                <td>2</td>
+                <td>Priya Verma</td>
+                <td>2018</td>
+                <td>120</td>
+            </tr>
+            <tr class="bronze">
+                <td>3</td>
+                <td>Arjun Nair</td>
+                <td>2016</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Simran Kaur</td>
+                <td>2017</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Mohit Gupta</td>
+                <td>2019</td>
+                <td>70</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="users" class="teal-text"></i>
+                    <span class="text-xl font-bold">Alumnexus</span>
+                </div>
+                <p class="text-gray-400">Connecting alumni, students, and institutions for lifelong engagement and
+                    growth.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
+                    <li><a href="login.html" class="text-gray-400 hover:text-white">Login</a>/ <a href="signup.html"
+                            class="text-gray-400 hover:text-white">Sign Up</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-400"><i data-feather="mail" class="mr-2 w-4 h-4"></i>
+                        contact@alumnexus.edu</li>
+                    <li class="flex items-center text-gray-400"><i data-feather="phone" class="mr-2 w-4 h-4"></i> +91
+                        7023-xxx-xxx</li>
+                    <li class="flex items-center text-gray-400"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> 246,
+                        Vijay Nagar, Indore, (M.P.) India</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2025 Alumnexus. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
+</body>
+
+</html>

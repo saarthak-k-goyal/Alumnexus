@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard - Alumnexus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -16,39 +18,50 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .bg-primary {
             background-color: #052A4A;
         }
+
         .text-primary {
             color: #052A4A;
         }
+
         .bg-teal {
             background-color: #09A89E;
         }
+
         .text-teal {
             color: #09A89E;
         }
+
         .bg-accent {
             background-color: #FF6F3C;
         }
+
         .text-accent {
             color: #FF6F3C;
         }
+
         .bg-light {
             background-color: #F5F7FA;
         }
+        .teal-text {
+            color: #09A89E;
+        }
     </style>
 </head>
+
 <body class="bg-light">
     <!-- Navigation -->
     <nav class="bg-primary text-white shadow-lg">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <i data-feather="users" class="w-8 h-8"></i>
+                <i data-feather="users" class="w-8 h-8 teal-text"></i>
                 <a href="index.html" class="text-2xl font-bold">Alumnexus</a>
             </div>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="dashboard-student.html" class="text-teal font-medium">Dashboard</a>
+                <a href="chat.html" class="text-teal font-medium">Message</a>
                 <a href="mentorship.html" class="text-white hover:text-teal transition">Mentorship</a>
                 <a href="events.html" class="text-white hover:text-teal transition">Events</a>
                 <div class="relative group">
@@ -57,7 +70,8 @@
                         <span>Michael C.</span>
                         <i data-feather="chevron-down" class="w-4 h-4"></i>
                     </button>
-                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                    <div
+                        class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
                         <a href="profile.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Profile</a>
                         <a href="settings.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Settings</a>
                         <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
@@ -70,7 +84,7 @@
         </div>
         <!-- Mobile menu -->
         <div class="md:hidden hidden bg-primary-dark px-6 py-2" id="mobile-menu">
-            <a href="dashboard-student.html" class="block py-2 text-teal font-medium">Dashboard</a>
+            <a href="chat.html" class="block py-2 text-teal font-medium">Message</a>
             <a href="mentorship.html" class="block py-2 text-white hover:text-teal transition">Mentorship</a>
             <a href="events.html" class="block py-2 text-white hover:text-teal transition">Events</a>
             <a href="profile.html" class="block py-2 text-white hover:text-teal transition">Profile</a>
@@ -86,7 +100,8 @@
             <div class="md:w-1/4">
                 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                     <div class="flex flex-col items-center">
-                        <img src="http://static.photos/people/200x200/13" alt="Profile" class="w-24 h-24 rounded-full mb-4">
+                        <img src="http://static.photos/people/200x200/13" alt="Profile"
+                            class="w-24 h-24 rounded-full mb-4">
                         <h2 class="text-xl font-bold text-primary">Saarthak K Goyal</h2>
                         <p class="text-teal mb-2">Class of 2027</p>
                         <p class="text-gray-600 text-center">Computer Science Major</p>
@@ -105,14 +120,17 @@
                             <a href="#" class="text-teal hover:underline">skgoyal.xyz</a>
                         </div>
                     </div>
-                    <a href="profile.html" class="mt-6 block w-full bg-teal hover:bg-teal-700 text-white text-center py-2 rounded-md transition">Edit Profile</a>
+                    <a href="profile.html"
+                        class="mt-6 block w-full bg-teal hover:bg-teal-700 text-white text-center py-2 rounded-md transition">Edit
+                        Profile</a>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-lg font-bold text-primary mb-4">Quick Actions</h3>
                     <ul class="space-y-3">
                         <li>
-                            <a href="mentorship.html" class="flex items-center text-gray-700 hover:text-teal transition">
+                            <a href="mentorship.html"
+                                class="flex items-center text-gray-700 hover:text-teal transition">
                                 <i data-feather="handshake" class="w-5 h-5 mr-2"></i>
                                 <span>Find a Mentor</span>
                             </a>
@@ -124,7 +142,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="internships.html" class="flex items-center text-gray-700 hover:text-teal transition">
+                            <a href="internships.html"
+                                class="flex items-center text-gray-700 hover:text-teal transition">
                                 <i data-feather="briefcase" class="w-5 h-5 mr-2"></i>
                                 <span>Internship Opportunities</span>
                             </a>
@@ -200,25 +219,35 @@
                         <h2 class="text-xl font-bold text-primary mb-4">Recommended Mentors</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="bg-light p-4 rounded-lg text-center">
-                                <img src="http://static.photos/people/200x200/14" alt="Mentor" class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <img src="http://static.photos/people/200x200/14" alt="Mentor"
+                                    class="w-16 h-16 rounded-full mx-auto mb-3">
                                 <h4 class="font-bold text-primary">Sarah Johnson</h4>
                                 <p class="text-sm text-gray-600 mb-2">Product Manager at TechCorp</p>
                                 <p class="text-xs text-gray-500 mb-3">Class of 2015</p>
-                                <button class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request Mentorship</button>
+                                <button
+                                    class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request
+                                    Mentorship</button>
                             </div>
                             <div class="bg-light p-4 rounded-lg text-center">
-                                <img src="http://static.photos/people/200x200/15" alt="Mentor" class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <img src="http://static.photos/people/200x200/15" alt="Mentor"
+                                    class="w-16 h-16 rounded-full mx-auto mb-3">
                                 <h4 class="font-bold text-primary">David Wilson</h4>
                                 <p class="text-sm text-gray-600 mb-2">Senior Developer at CodeWorks</p>
                                 <p class="text-xs text-gray-500 mb-3">Class of 2012</p>
-                                <button class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request Mentorship</button>
+                                <button
+                                    class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request
+                                    Mentorship</button>
                             </div>
                             <div class="bg-light p-4 rounded-lg text-center">
-                                <img src="http://static.photos/people/200x200/16" alt="Mentor" class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <img src="http://static.photos/people/200x200/16" alt="Mentor"
+                                    class="w-16 h-16 rounded-full mx-auto mb-3">
                                 <h4 class="font-bold text-primary">Emma Davis</h4>
                                 <p class="text-sm text-gray-600 mb-2">UX Designer at CreativeMinds</p>
                                 <p class="text-xs text-gray-500 mb-3">Class of 2016</p>
-                                <button class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request Mentorship</button>
+                                <button
+                                    class="bg-primary hover:bg-blue-800 text-white px-3 py-1 rounded-md text-sm">Request
+                                    Mentorship
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -240,6 +269,51 @@
                                     <p class="text-gray-600 mb-2">Join us for the biggest alumni event of the year!</p>
                                     <p class="text-sm text-gray-500">June 15, 2023 • 6:00 PM • Campus Quad</p>
                                 </div>
-                                <div class="ml-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i data-feather="users" class="w-6 h-6"></i>
+                        <span class="text-xl font-bold">Alumnexus</span>
+                    </div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-teal transition"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-teal transition"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-teal transition"><i data-feather="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-teal transition"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-teal-800 mt-6 pt-6 text-center text-teal-200">
+                <p>&copy; 2025 Alumnexus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
 </body>
 </html>

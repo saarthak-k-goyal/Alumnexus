@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat - Alumnexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F5F7FA;
+      color: #052A4A;
+    }
+    .bg-primary {
+            background-color: #052A4A;
+    }
+    .chat-container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 25%;
+      background: white;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+    .conversation {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .conversation:hover {
+      background: #F5F7FA;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #09A89E;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 0.8rem;
+    }
+    .conv-details {
+      flex: 1;
+    }
+    .conv-details h4 {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .conv-details p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    /* Main Chat */
+    .chat-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+    .messages {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .msg {
+      max-width: 60%;
+      margin: 0.5rem 0;
+      padding: 0.7rem 1rem;
+      border-radius: 15px;
+      font-size: 0.9rem;
+    }
+    .msg.other {
+      background: #eee;
+      align-self: flex-start;
+    }
+    .msg.self {
+      background: #09A89E;
+      color: white;
+      align-self: flex-end;
+    }
+    /* Input Area */
+    .chat-input {
+      display: flex;
+      padding: 0.8rem;
+      border-top: 1px solid #ddd;
+      align-items: center;
+      background: #fff;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+    }
+    .chat-input button {
+      background: #FF6F3C;
+      border: none;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      margin-left: 0.5rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .chat-input button:hover {
+      background: #e85c2a;
+    }
+    footer {
+      text-align: center;
+      padding: 0.8rem;
+      background: #052A4A;
+      color: white;
+    }
+    .teal-text {
+            color: #09A89E;
+        }
+  </style>
+</head>
+<body>
+<nav class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="users" class="w-8 h-8 teal-text"></i>
+                <a href="index.html" class="text-2xl font-bold">Alumnexus</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="leaderboard.html" class="text-teal font-medium">Leaderboard</a>
+                <a href="mentorship.html" class="text-white hover:text-teal transition">Mentorship</a>
+                <a href="events.html" class="text-white hover:text-teal transition">Events</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary-dark px-6 py-2" id="mobile-menu">
+            <a href="dashboard-alumni.html" class="block py-2 text-teal font-medium">Dashboard</a>
+            <a href="mentorship.html" class="block py-2 text-white hover:text-teal transition">Mentorship</a>
+            <a href="events.html" class="block py-2 text-white hover:text-teal transition">Events</a>
+            <a href="profile.html" class="block py-2 text-white hover:text-teal transition">Profile</a>
+            <a href="settings.html" class="block py-2 text-white hover:text-teal transition">Settings</a>
+            <a href="index.html" class="block py-2 text-white hover:text-teal transition">Logout</a>
+        </div>
+    </nav>
+
+  <div class="chat-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="conversation">
+        <div class="avatar">RS</div>
+        <div class="conv-details">
+          <h4>Rahul Sharma</h4>
+          <p>Excited for Alumni Meet...</p>
+        </div>
+      </div>
+      <div class="conversation">
+        <div class="avatar">PV</div>
+        <div class="conv-details">
+          <h4>Priya Verma</h4>
+          <p>Sure, let’s connect...</p>
+        </div>
+      </div>
+      <div class="conversation">
+        <div class="avatar">AN</div>
+        <div class="conv-details">
+          <h4>Arjun Nair</h4>
+          <p>Looking forward to mentor...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Chat -->
+    <div class="chat-box">
+      <div class="messages">
+        <div class="msg other">Hi everyone!</div>
+        <div class="msg other">Excited for Alumni Meet 2025!</div>
+        <div class="msg self">Looking forward to mentoring students.</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+      </div>
+    </div>
+  </div>
+  <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        feather.replace();
+    </script>
+</body>
+</html>
