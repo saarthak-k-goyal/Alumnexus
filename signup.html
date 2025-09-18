@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Alumnexus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F7FA;
+        }
+        .navy-bg {
+            background-color: #052A4A;
+        }
+        .teal-text {
+            color: #09A89E;
+        }
+        .orange-bg {
+            background-color: #FF6F3C;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navy-bg text-white py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <i data-feather="users" class="teal-text"></i>
+            <span class="text-xl font-bold">Alumnexus</span>
+        </div>
+        <div>
+            <a href="index.html" class="text-white hover:text-teal-300">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <section class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full bg-white p-8 rounded-lg card-shadow">
+            <div class="text-center mb-8">
+                <div class="flex justify-center mb-4">
+                    <i data-feather="user-plus" class="w-12 h-12 teal-text"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Create Your Account</h2>
+                <p class="mt-2 text-gray-600">Join the Alumnexus community today</p>
+            </div>
+            
+            <form class="space-y-6" action="dashboard.html" method="GET">
+                <div>
+                    <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <div class="mt-1">
+                        <input id="full-name" name="full-name" type="text" autocomplete="name" required 
+                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <div class="mt-1">
+                        <input id="email" name="email" type="email" autocomplete="email" required 
+                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1">
+                        <input id="password" name="password" type="password" autocomplete="new-password" required 
+                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <div class="mt-1">
+                        <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required 
+                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">I am a</label>
+                    <div class="mt-2 grid grid-cols-3 gap-3">
+                        <div>
+                            <input type="radio" id="alumni" name="role" value="alumni" class="hidden peer" checked>
+                            <label for="alumni" class="flex flex-col items-center justify-center p-4 border border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:bg-blue-50 hover:bg-gray-50">
+                                <i data-feather="user" class="w-6 h-6 mb-2"></i>
+                                <span class="text-sm">Alumni</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="student" name="role" value="student" class="hidden peer">
+                            <label for="student" class="flex flex-col items-center justify-center p-4 border border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:bg-blue-50 hover:bg-gray-50">
+                                <i data-feather="book" class="w-6 h-6 mb-2"></i>
+                                <span class="text-sm">Student</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="admin" name="role" value="admin" class="hidden peer">
+                            <label for="admin" class="flex flex-col items-center justify-center p-4 border border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:bg-blue-50 hover:bg-gray-50">
+                                <i data-feather="settings" class="w-6 h-6 mb-2"></i>
+                                <span class="text-sm">Admin</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="terms" name="terms" type="checkbox" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" required>
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="terms" class="font-medium text-gray-700">I agree to the <a href="#" class="teal-text hover:text-teal-700">Terms of Service</a> and <a href="#" class="teal-text hover:text-teal-700">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" 
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white orange-bg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Create Account
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-6">
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">Or sign up with</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                    <div>
+                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Already have an account? 
+                    <a href="login.html" class="font-medium teal-text hover:text-teal-700">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Alumnexus - Alumni Engagement Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background-color: #052A4A;
+        }
+        .text-primary {
+            color: #052A4A;
+        }
+        .bg-teal {
+            background-color: #09A89E;
+        }
+        .text-teal {
+            color: #09A89E;
+        }
+        .bg-accent {
+            background-color: #FF6F3C;
+        }
+        .text-accent {
+            color: #FF6F3C;
+        }
+        .bg-light {
+            background-color: #F5F7FA;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="users" class="w-8 h-8"></i>
+                <a href="index.html" class="text-2xl font-bold">Alumnexus</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-white hover:text-teal transition">Home</a>
+                <a href="about.html" class="text-teal font-medium">About</a>
+                <a href="login.html" class="bg-teal hover:bg-teal-700 text-white px-4 py-2 rounded-md transition">Login</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary-dark px-6 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 text-white hover:text-teal transition">Home</a>
+            <a href="about.html" class="block py-2 text-teal font-medium">About</a>
+            <a href="login.html" class="block py-2 text-teal font-medium">Login</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">About Alumnexus</h1>
+            <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Our mission is to create meaningful connections between alumni, students, and institutions to foster lifelong engagement and mutual growth.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/education/1024x576/2" alt="Alumni Network" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2023, Alumnexus was born out of a recognition that alumni networks are often fragmented across multiple platforms, making it difficult for institutions to maintain engagement and for alumni to stay connected.</p>
+                    <p class="text-gray-600 mb-4">We saw an opportunity to create a centralized platform that serves the needs of all stakeholders - alumni who want to give back, students seeking guidance, and institutions looking to strengthen their alumni relations.</p>
+                    <p class="text-gray-600">Today, Alumnexus is helping institutions worldwide transform their alumni engagement strategies and create vibrant communities that last a lifetime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" data-aos="fade-up">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="link" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Connection</h3>
+                    <p class="text-gray-600">We believe in the power of human connections to transform lives and careers.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-teal text-white w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="heart" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Community</h3>
+                    <p class="text-gray-600">We're committed to building inclusive communities where everyone can contribute and benefit.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="trending-up" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Growth</h3>
+                    <p class="text-gray-600">We're passionate about creating opportunities for personal and professional development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary mb-16">Meet The Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center" data-aos="fade-up">
+                    <img src="http://static.photos/people/200x200/3" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-primary">Alex Rivera</h3>
+                    <p class="text-teal mb-2">Co-Founder & CEO</p>
+                    <p class="text-gray-600">Former university administrator with 10+ years in alumni relations.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/people/200x200/4" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-primary">Priya Patel</h3>
+                    <p class="text-teal mb-2">Co-Founder & CTO</p>
+                    <p class="text-gray-600">Tech leader passionate about building community-driven platforms.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/people/200x200/5" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-primary">Jamal Williams</h3>
+                    <p class="text-teal mb-2">Head of Product</p>
+                    <p class="text-gray-600">Product designer focused on creating intuitive user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-teal text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Join Our Growing Community</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Whether you're an alumni, student, or institution representative, we'd love to have you on board.</p>
+            <a href="login.html" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-md font-medium text-lg transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Alumnexus</h3>
+                    <p class="text-teal-200">Bridging alumni, students, and institutions for lifelong engagement.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-teal-200 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-teal-200 hover:text-white transition">About</a></li>
+                        <li><a href="login.html" class="text-teal-200 hover:text-white transition">Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i data-feather="mail" class="w-4 h-4 mr-2"></i> contact@alumnexus.com</li>
+                        <li class="flex items-center"><i data-feather="phone" class="w-4 h-4 mr-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-teal-200 hover:text-white transition"><i data-feather="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-teal-200 hover:text-white transition"><i data-feather="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-teal-200 hover:text-white transition"><i data-feather="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-teal-200 hover:text-white transition"><i data-feather="instagram" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-teal-800 mt-8 pt-8 text-center text-teal-200">
+                <p>&copy; 2025 Alumnexus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        feather.replace();
+    </script>
+</body>
+</html>
